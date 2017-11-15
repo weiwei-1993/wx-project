@@ -1,0 +1,27 @@
+<import src="../components/banner/banner.wxml"/>
+
+<template is="banner" data="{{bannerData,urlShow}}"/>
+<view class="name">{{shop.name}}</view>
+<view class="price">￥{{shop.nowPrice}}</view>
+<view class="space"></view>
+<view class="title">商品详情</view>
+<view class="detail-wrape">{{shop.decsript}}</view>
+<view class="footer">
+    <view class="car">
+        <navigator url="/pages/shopCar/shopCar" class="href" hover-class="none" open-type="switchTab">
+            <image src="../imgs/car.png"/>
+            <text wx:if="{{shop.count>0}}" class="count">{{shop.count}}</text>
+        </navigator>
+    </view>
+    <view class="car">
+        <navigator url="/pages/shopCar/shopCar" class="href">
+            <image src="../imgs/heart.png"/>
+        </navigator>
+    </view>
+    <view class="add-car view2" bindtap="addCar">
+        加入购物车
+    </view>
+    <view class="buy view2">
+        立即购买
+    </view>
+</view>

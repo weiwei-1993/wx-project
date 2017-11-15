@@ -1,0 +1,32 @@
+<view class="title">
+    <block wx:for="{{title}}" wx:key="">
+        <view class="text {{index==tabnum?'active':''}}" bindtap="order" data-index="{{index}}">{{item}}</view>
+    </block>
+</view>
+<view>
+    <block wx:for="{{orderList}}" wx:key="">
+        <view class="space"></view>
+        <view class="order-wrap">
+            <view class="order-num">
+                <text class="num">订单编号：{{item.order}}</text>
+                <text class="status" wx:if="item.status == 1">待支付</text>
+            </view>
+            <block wx:for="{{item.shopList}}" wx:for-item="shop" wx:key="">
+                <view class="shop">
+                    <view class="img">
+                        <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
+                    </view>
+                    <view class="info">
+                        <view class="name">{{shop.name}}</view>
+                        <view class="price">{{shop.price}}</view>
+                        <view class="number">x{{shop.num}}</view>
+                    </view>
+                </view>
+            </block>
+            <view class="total-price">共{{item.shopList.length}}件商品 合计：￥{{item.totalPrice}} （含运费￥{{item.freight}}）</view>
+            <view class="btn">
+                <button type="default" plain="true">支付</button>
+            </view>
+        </view>
+    </block>
+</view>

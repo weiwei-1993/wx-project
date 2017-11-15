@@ -1,0 +1,32 @@
+<view class="car-wrap">
+    <view wx:if="{{carShopShow}}">
+        <block wx:for="{{carShop}}" wx:key="">
+            <view class="shop-list-wrap">
+                <view class="icon" bindtap="selectShop" data-id="{{item.shopid}}">
+                    <view class="iconwrap" wx:if="{{!item.selected}}"></view>
+                    <icon wx:else type="success" size="20"/>
+                </view>
+                <view class="img">
+                    <image src="{{item.imgUrl[0]}}"/>
+                </view>
+                <view class="shop">
+                    <view class="name">{{item.name}}</view>
+                    <view class="price">￥{{item.nowPrice}}</view>
+                </view>
+                <view class="operation">
+                    <view class="calculate" bindtap="calculate" data-op="-1" data-id="{{item.shopid}}">-</view>
+                    <view class="count-text">{{item.count}}</view>
+                    <view class="calculate" bindtap="calculate" data-op="1" data-id="{{item.shopid}}">+</view>
+                </view>
+            </view>
+        </block>
+        <view class="footer">
+            <view class="total-price">￥{{totalPrice}}</view>
+            <view class="to-buy">购买</view>
+        </view>
+    </view>
+
+    <view class="car-noshop" wx:else>
+        <image src="../imgs/noshop.jpg" mode="aspectFill"/>
+    </view>
+</view>

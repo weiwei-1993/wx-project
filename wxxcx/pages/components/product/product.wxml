@@ -1,0 +1,18 @@
+<template name="product">
+    <view class="product">
+        <!--<block wx:for="{{productData}}" wx:key="">-->
+            <view class="product-wrap">
+                <navigator url="/pages/detail/detail?themeid={{theme.themeid}}&&shopid={{item.shopid}}" class="href" hover-class="none">
+                    <view class="img">
+                        <image src="{{item.imgUrl[0]}}" alt=""/>
+                    </view>
+                    <view class="name">{{item.name}}</view>
+                    <view class="price">
+                        <text class="now">￥{{item.nowPrice}}</text>
+                        <text class="old">￥{{item.oldPrice}}</text>
+                    </view>
+                </navigator>
+            </view>
+        <!--</block>-->
+    </view>
+</template>

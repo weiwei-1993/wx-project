@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<import src="../components/banner/banner.wxml"/>
+<import src="../components/product/product.wxml"/>
+<import src="../components/nomore/nomore.wxml"/>
+
+<template is="banner" data="{{bannerData,urlShow}}"/>
+
+<view class="order-wrap">
+    <text wx:for="{{orderbyText}}" wx:key="" class="{{orderbyNum==index?'active':''}}" bindtap="orderbyTab" data-id="{{index}}">{{item}}</text>
+</view>
+
+<view class="title-wrap">
+    <view class="content">
+        <view class="line"></view>
+        <view class="text">精心挑选</view>
+        <view class="line"></view>
+    </view>
+</view>
+<block wx:for="{{alldata.themeList}}" wx:for-item="theme" wx:key="">
+    <view class="product-box" wx:if="{{index==0}}">
+        <template is="product" wx:for="{{theme.productData}}" wx:key="" data="{{item,theme}}"/>
+    </view>
+    <view class="i-product-wrap" wx:if="{{index>0}}">
+        <template is="product" data="{{item,theme}}" wx:for="{{theme.productData}}" wx:key=""/>
+    </view>
+    <view class="space"></view>
+</block>
+
+
+<!--<view class="i-product-wrap">
+    <template is="product" data="{{item}}" wx:for="{{productData3.productData}}" wx:key=""/>
+</view>-->
+
+<template is="nomore"/>
+

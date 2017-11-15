@@ -1,0 +1,24 @@
+<view class="head">
+    <view class="icon">
+        <image src="{{userInfo.avatarUrl}}" alt=""/>
+    </view>
+    <view class="name" mode="aspectFit">{{userInfo.nickName}}</view>
+</view>
+<!--<view class="space"></view>-->
+<block wx:for="{{myList}}" wx:key="">
+    <view class="space"></view>
+    <view class="block">
+        <block wx:for="{{item}}" wx:key="">
+            <navigator url="{{item.href}}" hover-class="none" class="nav">
+                <view class="icon">
+                    <image src="{{item.iconUrl}}"/>
+                </view>
+                <view class="text">{{item.name}}</view>
+                <view class="icon">
+                    <image src="../imgs/right.png"/>
+                </view>
+            </navigator>
+        </block>
+    </view>
+</block>
+

@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/shopCar/shopCar",
+    "pages/personal/personal",
+    "pages/shopList/shopList",
+    "pages/detail/detail",
+    "pages/order/order"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTextStyle": "#ffffff",
+    "navigationBarTitleText": "测试小程序",
+    "backgroundTextStyle":"light"
+    },
+  "tabBar":{
+    "color": "#aaa",
+    "selectedColor": "#222",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "精选",
+      "iconPath": "pages/imgs/main.png",
+      "selectedIconPath": "pages/imgs/main_on.png"
+    },{
+      "pagePath": "pages/shopCar/shopCar",
+      "text": "购物车",
+      "iconPath": "pages/imgs/car.png",
+      "selectedIconPath": "pages/imgs/car_on.png"
+    },{
+      "pagePath": "pages/personal/personal",
+      "text": "个人中心",
+      "iconPath": "pages/imgs/mine.png",
+      "selectedIconPath": "pages/imgs/mine_on.png"
+    }]
+  }
+}

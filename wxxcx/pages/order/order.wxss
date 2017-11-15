@@ -1,0 +1,96 @@
+.title{
+  display: flex;
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #fff;
+}
+.title .text{
+  flex: 1;
+  text-align: center;
+  font-size: 28rpx;
+}
+.title .active{
+  border-bottom: 1px solid #222;
+  font-weight: 700;
+}
+.order-wrap{
+  width: 100%;
+  background: #fff;
+}
+.order-wrap .order-num{
+  display: flex;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-bottom: 1px solid #eee;
+  padding: 0 30rpx;
+  font-size: 28rpx;
+  color: #444;
+}
+.order-wrap .order-num .num{
+  flex: 1;
+}
+.order-wrap .order-num .status{
+  width: 100rpx;
+  text-align: right;
+  color: red;
+}
+.order-wrap .shop{
+  display: flex;
+  /*height: 120rpx;*/
+  padding: 10rpx 30rpx;
+  border-bottom: 1px solid #eee;
+}
+.order-wrap .shop .img{
+  width: 120rpx;
+  /*height: 100%;*/
+  padding: 10rpx 20rpx;
+}
+.order-wrap .shop .img image{
+  width: 100%;
+  height: 100%;
+}
+.order-wrap .shop .info{
+  flex: 1;
+}
+.shop .number,.shop .price,.shop .name{
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #aaa;
+}
+.shop .name{
+  color: #333;
+  font-size: 28rpx;
+  padding: 10rpx 0;
+}
+.order-wrap .total-price{
+  padding: 0 30rpx;
+  line-height: 80rpx;
+  text-align: right;
+  font-size: 28rpx;
+  color: #aaa;
+}
+.order-wrap .btn{
+  padding: 0 30rpx 30rpx 0;
+  height: 70rpx;
+}
+.order-wrap .btn button{
+  float: right;
+  width: 160rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border: 1px solid red;
+  color: red;
+  font-size: 28rpx;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+<import src="../components/product/product.wxml"/>
+<view class="banner">
+    <image src="{{imgUrls[imgId]}}"/>
+</view>
+<view class="theme-name">{{themeList[imgId].theme}}</view>
+<view class="theme-descript">{{themeList[imgId].theme}}</view>
+<view class="">
+    <template is="product" data="{{productData}}"/>
+</view>
